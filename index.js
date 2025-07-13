@@ -26,7 +26,6 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: '*',
-    credentials: true,
     methods: ['GET', 'POST'],
   },
 });
@@ -37,7 +36,6 @@ app.use(bodyParser.json());
 app.use(
   cors({
     origin: '*',
-    credentials: true,
   })
 );
 app.use(
